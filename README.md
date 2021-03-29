@@ -1,6 +1,6 @@
 # Random Licks
 
-> Generate random lick for musical inspiration
+> Generate random licks for musical inspiration
 
 ---
 
