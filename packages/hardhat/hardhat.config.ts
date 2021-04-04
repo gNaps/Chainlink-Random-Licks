@@ -1,4 +1,4 @@
-import { utils } from "ethers";
+import { Transaction, utils } from "ethers";
 import * as fs from "fs";
 import "@nomiclabs/hardhat-waffle";
 import "@tenderly/hardhat-tenderly";

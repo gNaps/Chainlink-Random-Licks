@@ -1,34 +1,27 @@
 import { BigInt, Address } from "@graphprotocol/graph-ts"
 import {
-  YourContract,
-  SetPurpose
-} from "../generated/YourContract/YourContract"
-import { Purpose, Sender } from "../generated/schema"
+  MintLicks,
+  Transfer
+} from "../generated/MintLicks/MintLicks"
+import { Token } from "../generated/schema"
+import { log } from '@graphprotocol/graph-ts'
 
-export function handleSetPurpose(event: SetPurpose): void {
+export function handleTransfer(event: Transfer): void {
+  log.debug("i'm here", []);
+  log.debug(event.params.from.toString(), []);
+  if(event.params.from === Address.fromI32(0)) {
+    // Mint event, new token has been create
+    let token = new Token(event.params.tokenId.toString());
+    log.debug(token.id, []);
+    token.owner = event.params.to.toHex();
 
-  let senderString = event.params.sender.toHexString()
-
-  let sender = Sender.load(senderString)
-
-  if (sender == null) {
-    sender = new Sender(senderString)
-    sender.address = event.params.sender
-    sender.createdAt = event.block.timestamp
-    sender.purposeCount = BigInt.fromI32(1)
+    let contract = MintLicks.bind(Address.fromString("0xe0130e00FED32004D8B50001CFC8F3e3605940Ad"));
+    token.tokenUri = contract.tokenURI(event.params.tokenId);
+    token.save();
+  } else {
+    let token = Token.load(event.params.tokenId.toString());
+    log.debug(token.id, []);
+    token.owner = event.params.to.toHex();
+    token.save();
   }
-  else {
-    sender.purposeCount = sender.purposeCount.plus(BigInt.fromI32(1))
-  }
-
-  let purpose = new Purpose(event.transaction.hash.toHex() + "-" + event.logIndex.toString())
-
-  purpose.purpose = event.params.purpose
-  purpose.sender = senderString
-  purpose.createdAt = event.block.timestamp
-  purpose.transactionHash = event.transaction.hash.toHex()
-
-  purpose.save()
-  sender.save()
-
 }

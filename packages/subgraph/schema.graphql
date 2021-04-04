@@ -1,0 +1,5 @@
+type Token @entity {
+  id: ID!
+  owner: String!
+  tokenUri: String!
+}
