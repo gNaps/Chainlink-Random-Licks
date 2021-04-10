@@ -18,7 +18,7 @@ Subgraph
 https://thegraph.com/explorer/subgraph/gnaps/mintlicks
 
 Interface
-https://randomlicks.vercel.app/
+https://chainlink-random-licks.vercel.app/
 
 ## Get Started
 
