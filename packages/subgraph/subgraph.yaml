@@ -1,0 +1,24 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: MintLicks
+    network: rinkeby
+    source:
+      address: '0xe0130e00FED32004D8B50001CFC8F3e3605940Ad'
+      abi: MintLicks
+      startBlock: 8320770
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Token
+      abis:
+        - name: MintLicks
+          file: ./abis/MintLicks.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      file: ./src/mapping.ts

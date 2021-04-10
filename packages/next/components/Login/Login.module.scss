@@ -1,3 +1,42 @@
 .login {
-    text-align: center;
+  padding: 20px;
+  background-color: #5333ed;
+  display: flex;
+  justify-content: flex-end;
+
+    button {
+      background: #FFF;
+      border: none;
+      padding: 10px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+}
+
+.navbar {
+  padding: 20px;
+  background-color: #5333ed;
+  display: flex;
+  align-items: center;
+
+    img {
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    p {
+      color: #FFF;
+    }
+
+    div {
+      margin-left: auto;
+    }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    div {
+      width: 100px;
+    }
   }
+}

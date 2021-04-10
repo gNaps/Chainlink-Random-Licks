@@ -24,20 +24,14 @@ export const GET_ALL_LICKS = gql`
 /**
  * Given a postId load the post
  */
-export const GET_POST_QUERY = gql`
-  query posts($postId: String!) {
-    posts(
-      orderBy: publishedAtBlock
-      orderDirection: desc
-      where: { id: $postId }
+export const GET_MY_LICKS = gql`
+  query GetMyTokens($owner: String!) {
+    tokens(
+      where: { owner: $owner }
     ) {
       id
-      publishedAtBlock
-      author
-      content
-      replyTo
-      likes
-      dislikes
+      owner
+      tokenUri
     }
   }
 `;

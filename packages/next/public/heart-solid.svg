@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="449px" viewBox="0 0 512 449" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>heart-solid</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="heart-solid" transform="translate(-1.000000, 0.000000)" fill="#FFFFFF">
+            <path d="M463.3,31.6 C408.5,-15.1 327,-6.7 276.7,45.2 L257,65.5 L237.3,45.2 C187.1,-6.7 105.5,-15.1 50.7,31.6 C-12.1,85.2 -15.4,181.4 40.8,239.5 L234.3,439.3 C246.8,452.2 267.1,452.2 279.6,439.3 L473.1,239.5 C529.4,181.4 526.1,85.2 463.3,31.6 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>
