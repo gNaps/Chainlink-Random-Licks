@@ -7,7 +7,7 @@
 
 This dapp allows you to generate a Random Licks using Chainlink VRF. 
 
-## Demo (Mumbai)
+## Demo (Rinkeby)
 
 ![Demo](https://gabrielenapoli.com/images/randomlicks/home.png?raw=true)
 
