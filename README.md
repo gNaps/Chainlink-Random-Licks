@@ -24,7 +24,7 @@ https://chainlink-random-licks.vercel.app/
 
 Download
 ```
-git clone https://github.com/GalloDaSballo/matic-microblog-mono
+git clone https://github.com/gNaps/Chainlink-Random-Licks
 ```
 
 ### Install all deps
